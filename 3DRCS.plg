@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 3DRCS - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\baiyang\AppData\Local\Temp\RSP2D76.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I "include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/3DRCS.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"G:\中心软件\我的修改记录\PSO20140327\3DRCSDoc.cpp"
+]
+Creating command line "cl.exe @C:\Users\baiyang\AppData\Local\Temp\RSP2D76.tmp" 
+Creating temporary file "C:\Users\baiyang\AppData\Local\Temp\RSP2D77.tmp" with contents
+[
+glut32.lib opengl32.lib glu32.lib glaux.lib release/XpButton.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/3DRCS.pdb" /map:"Release/3DRCS.map" /debug /machine:I386 /out:"Release/3DRCS.exe" 
+".\Release\3DRCS.obj"
+".\Release\3DRCSDoc.obj"
+".\Release\3DRCSView.obj"
+".\Release\ControlWnd.obj"
+".\Release\Edge.obj"
+".\Release\Facet.obj"
+".\Release\MainFrm.obj"
+".\Release\ModeInfo.obj"
+".\Release\ProjectView.obj"
+".\Release\PSOintro.obj"
+".\Release\SaveDlg.obj"
+".\Release\ShowParaDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\Vertex.obj"
+".\Release\3DRCS.res"
+]
+Creating command line "link.exe @C:\Users\baiyang\AppData\Local\Temp\RSP2D77.tmp"
+<h3>Output Window</h3>
+Compiling...
+3DRCSDoc.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+3DRCS.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

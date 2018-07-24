@@ -1,0 +1,964 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\3DRCS.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\3DRCS.ico"
+IDR_3DRCSTYPE           ICON                    "res\\3DRCSDoc.ico"
+IDI_OPEN                ICON                    "res\\Open.ico"
+IDI_SAVE                ICON                    "res\\Save.ico"
+IDI_SET                 ICON                    "res\\Customize.ico"
+IDI_CLEAR               ICON                    "res\\Clear.ico"
+IDI_ZOOMOUT             ICON                    "res\\icon1.ico"
+IDI_zoomin              ICON                    "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BUTTON              BITMAP                  "res\\ButtonsWin3000.bmp"
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_TOOLBARBKMAP        BITMAP                  "res\\ToolBarBk.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "   文 件 (&F) "
+    BEGIN
+        MENUITEM "加载图形文件 (&F)...\tCtrl+F",      IDM_PICS_OPEN
+        MENUITEM "打开         (&M)...\tCtrl+M",  ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "保存         (&S)...\tCtrl+S",  ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "退出程序 (&X)",                   ID_APP_EXIT
+    END
+    POPUP " 编 辑 (&E) "
+    BEGIN
+        MENUITEM "清空数据 (&D)\tCtrl+D",           IDM_CLEAR_DATA
+        MENUITEM "重载数据(&C)\tCtrl+C",            IDM_RELOAD_DATA
+    END
+    POPUP " 重 建 (&C) "
+    BEGIN
+        MENUITEM "MC重建 (&C)",                   IDC_MC_CONSTRUCT
+        MENUITEM "MT重建 (&T)",                   IDC_MT_CONSTRUCT
+    END
+    POPUP " 优 化 (&O) "
+    BEGIN
+        MENUITEM "模型简化 (&R)",                   IDM_REDUCE_MESH
+        MENUITEM "网格平滑 (&O)",                   IDM_SMOOTH_Mesh
+        MENUITEM "自适应简化",                       IDM_REDUCE_MESH3
+        MENUITEM "端面填充",                        IDM_REPAIRHOLE
+        MENUITEM "孔洞修复",                        IDM_PatchHoles
+    END
+    POPUP " 分 析 (&A) "
+    BEGIN
+        MENUITEM "三角面片质量",                      IDM_CalStandard
+        MENUITEM "模型信息",                        IDM_ModInfo
+    END
+    POPUP "操作(&M) "
+    BEGIN
+        POPUP "旋转轴控制"
+        BEGIN
+            MENUITEM "X轴",                          IDC_TURNX
+            MENUITEM "Y轴",                          IDC_TURNY
+            MENUITEM "Z轴",                          IDC_TURNZ
+        END
+        POPUP "鼠标操作"
+        BEGIN
+            MENUITEM "旋转",                          IDC_TURN
+            MENUITEM "平移",                          IDC_TRANSLATE
+            MENUITEM "局放",                          IDC_ZOOMOUT
+        END
+        POPUP "辅助系统"
+        BEGIN
+            MENUITEM "光照",                          IDM_CHECKLIGHTING
+            MENUITEM "反向",                          IDM_FACETREVERSE
+            MENUITEM "坐标",                          IDM_CHECKCOOLDINATE
+        END
+        MENUITEM "放大\tAlt++",                   IDM_ZOOMADD
+        MENUITEM "缩小\tAlt+-",                   IDM_ZOOMDEL
+        MENUITEM "适中\tAlt+M",                   IDM_SHOWMEDIUM
+        MENUITEM "复原\tAlt+B",                   IDM_ZOOMBACK
+    END
+    POPUP " 显 示 (&S) "
+    BEGIN
+        MENUITEM "工具栏 (&T)",                    ID_VIEW_TOOLBAR
+        MENUITEM "状态栏 (&S)",                    ID_VIEW_STATUS_BAR
+        POPUP "显示类型"
+        BEGIN
+            MENUITEM "面片",                          IDC_FACET
+            MENUITEM "网格",                          IDC_EDGE
+            MENUITEM "点云",                          IDC_VERTEX
+            MENUITEM "面片+网格",                       IDC_FacetEdge
+        END
+    END
+    POPUP " 帮 助 (&H) "
+    BEGIN
+        MENUITEM "帮助文档 (&H)...",                ID_APP_HELP
+    END
+END
+
+IDR_MYMENU MENU
+BEGIN
+    POPUP "快捷键菜单"
+    BEGIN
+        POPUP "显示类型"
+        BEGIN
+            MENUITEM "面片",                          IDC_FACET
+            MENUITEM "网格",                          IDC_EDGE
+            MENUITEM "点云",                          IDC_VERTEX
+        END
+        POPUP "鼠标操作"
+        BEGIN
+            MENUITEM "旋转",                          IDC_TURN
+            MENUITEM "平移",                          IDC_TRANSLATE
+            MENUITEM "局放",                          IDC_ZOOMOUT
+        END
+        POPUP "旋转轴控制"
+        BEGIN
+            MENUITEM "X轴",                          IDC_TURNX
+            MENUITEM "Y轴",                          IDC_TURNY
+            MENUITEM "Z轴",                          IDC_TURNZ
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "+",            IDM_ZOOMADD,            ASCII,  ALT, NOINVERT
+    "_",            IDM_ZOOMDEL,            ASCII,  ALT, NOINVERT
+    "M",            IDM_SHOWMEDIUM,         VIRTKEY, ALT, NOINVERT
+    "B",            IDM_ZOOMBACK,           VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 三维重建系统 3DRCS"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "三维重建系统 3DRCS 1.0 版",IDC_STATIC,40,15,119,8,SS_NOPREFIX
+    LTEXT           "版权所有  重庆大学ICT研究中心 2010",IDC_STATIC,40,30,148,8
+    DEFPUSHBUTTON   "确定",IDOK,178,15,50,14,WS_GROUP
+END
+
+IDD_CONTROLDLG DIALOGEX 0, 0, 557, 272
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_LEFTSCROLLBAR
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "加载模型",IDC_GETDATA,121,38,49,14
+    PUSHBUTTON      "数据清空",IDC_CLEAR_DATA,121,53,49,14
+    PUSHBUTTON      "重载数据",IDC_RELOAD_DATA,121,68,49,14
+    PUSHBUTTON      "保存数据",IDC_SAVEFILE,121,83,49,14
+    PUSHBUTTON      "端面填充",IDC_MESHPATCH,121,106,49,14
+    PUSHBUTTON      "网格平滑",IDC_SMOOTH_MESH,121,121,49,14
+    PUSHBUTTON      "网格简化",IDC_REDUCE_MESH,121,136,49,14
+    PUSHBUTTON      "孔洞修补",IDC_DIVIDE_MODE,121,151,49,14
+    PUSHBUTTON      "加载图片",ID_PICS_OPEN,121,22,49,14
+    PUSHBUTTON      "显示设置",IDC_SHOWPARA,121,174,49,14
+    PUSHBUTTON      "模型信息",IDC_MODEINFO,121,189,49,14
+    PUSHBUTTON      "退出系统",IDC_CLOSEWND,121,210,50,14
+    PUSHBUTTON      "放大",IDC_ZOOMADD,92,62,21,14
+    PUSHBUTTON      "缩小",IDC_ZOOMDEL,92,78,21,14
+    PUSHBUTTON      "复原",IDC_ZOOMBACK,92,110,21,14
+    PUSHBUTTON      "适中",IDC_SHOWMEDIUM,92,94,21,14
+    CONTROL         "面片",IDC_FACETS,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP,16,140,32,10
+    CONTROL         "网格",IDC_EDGES,"Button",BS_AUTORADIOBUTTON | BS_FLAT,49,140,32,10
+    CONTROL         "点云",IDC_VERTEXES,"Button",BS_AUTORADIOBUTTON | BS_FLAT,82,140,30,10
+    CONTROL         "旋转",IDC_RADIOTURN,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP,16,165,32,10
+    CONTROL         "平移",IDC_RADIOTRANSLATE,"Button",BS_AUTORADIOBUTTON | BS_FLAT,49,165,32,10
+    CONTROL         "局放",IDC_RADIOSELECT,"Button",BS_AUTORADIOBUTTON | BS_FLAT,82,165,30,10
+    CONTROL         "X 轴",IDC_RADIOTURNX,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP,16,190,32,10
+    CONTROL         "Y 轴",IDC_RADIOTURNY,"Button",BS_AUTORADIOBUTTON | BS_FLAT,49,190,32,10
+    CONTROL         "Z 轴",IDC_RADIOTURNZ,"Button",BS_AUTORADIOBUTTON | BS_FLAT,82,190,29,10
+    CONTROL         "光照",IDC_CHECKLIGHTING,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,16,215,28,10
+    CONTROL         "反向",IDC_FACETREVERSE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,50,215,28,10
+    CONTROL         "坐标",IDC_CHECKCOOLDINATE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,83,215,28,10
+    CONTROL         "Slider1",IDC_SECTIONX,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,28,72,61,13
+    CONTROL         "Slider1",IDC_SECTIONY,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,90,62,13
+    CONTROL         "Slider1",IDC_SECTIONZ,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,109,62,14
+    EDITTEXT        IDC_XZOOM,23,36,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YZOOM,57,36,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZZOOM,91,36,22,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ANGLE_THRESHOLD,220,182,31,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_ALLVALUE,444,28,98,228,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_REDUCERATE,49,242,28,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FACETNUM,110,242,33,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDGENUM,170,242,33,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_VERTEXNUM,228,242,33,13,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,118,16,57,213
+    GROUPBOX        "参数设置",IDC_STATIC,177,19,89,210,BS_CENTER
+    GROUPBOX        "STL信息",IDC_STATIC,7,232,259,27,BS_CENTER
+    GROUPBOX        "显示设置",IDC_STATIC,7,16,109,213,BS_CENTER
+    GROUPBOX        "剖视位置",IDC_STATIC,10,56,104,71
+    GROUPBOX        "显示类型",IDC_STATIC,10,128,104,23
+    GROUPBOX        "鼠标动作",IDC_STATIC,10,153,104,23
+    GROUPBOX        "滚轮操作",IDC_STATIC,10,178,104,23
+    GROUPBOX        "辅助系统",IDC_STATIC,10,204,104,23
+    GROUPBOX        "比例缩放",IDC_STATIC,10,26,104,28
+    GROUPBOX        "图像文件",IDC_STATIC,441,16,105,243
+    GROUPBOX        "",IDC_STATIC,91,56,24,71
+    LTEXT           "X:",IDC_STATIC,13,39,9,8
+    LTEXT           "Y:",IDC_STATIC,47,39,9,8
+    LTEXT           "Z:",IDC_STATIC,81,39,9,8,0,WS_EX_TRANSPARENT
+    LTEXT           "角度阈值:",IDC_STATIC,181,183,37,8,0,WS_EX_TRANSPARENT
+    LTEXT           "面数:",IDC_STATIC,87,245,20,8
+    LTEXT           "点数:",IDC_STATIC,206,245,20,8
+    CTEXT           "三维重建系统（3DRCS）控制台",IDC_STATIC,90,1,113,11,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "边数:",IDC_STATIC,149,245,20,8
+    LTEXT           "删减比率:",IDC_STATIC,12,245,36,8
+    GROUPBOX        "",IDC_STATIC,7,232,75,27
+    LTEXT           "X轴：",IDC_STATIC,15,72,22,10
+    GROUPBOX        "",IDC_STATIC,11,64,79,21
+    LTEXT           "Y轴：",IDC_STATIC,14,92,22,10
+    GROUPBOX        "",IDC_STATIC,11,84,79,21
+    LTEXT           "Z轴：",IDC_STATIC,14,112,22,10
+    GROUPBOX        "",IDC_STATIC,11,104,79,21
+    GROUPBOX        "",IDC_STATIC,118,16,57,84
+    GROUPBOX        "",IDC_STATIC,118,99,57,69
+    GROUPBOX        "",IDC_STATIC,118,167,57,40
+    GROUPBOX        "",IDC_STATIC,7,7,261,253
+    GROUPBOX        "",IDC_STATIC,0,3,8,9
+    GROUPBOX        "",IDC_STATIC,549,3,8,9
+    GROUPBOX        "",IDC_STATIC,0,254,8,9
+    GROUPBOX        "",IDC_STATIC,549,255,8,9
+    GROUPBOX        "重建设置",IDC_STATIC,179,27,85,85
+    CONTROL         "Slider1",IDC_MCMTTHRESHOLD,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,182,68,61,22
+    GROUPBOX        "",IDC_STATIC,181,69,82,21
+    EDITTEXT        IDC_THRESHOLDEDIT,243,76,18,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XCONZOOM,189,39,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YCONZOOM,217,39,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZCONZOOM,244,39,20,14,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,181,41,8,8
+    LTEXT           "Y:",IDC_STATIC,209,41,8,8
+    LTEXT           "Z:",IDC_STATIC,236,41,8,8,0,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_CONSTRUCTTYPE,184,57,76,47,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "外环",IDC_CHECKRING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,186,95,30,10
+    CONTROL         "封闭",IDC_PATCHMESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,95,30,10
+    GROUPBOX        "",IDC_STATIC,181,88,41,21
+    GROUPBOX        "",IDC_STATIC,222,88,41,21
+    EDITTEXT        IDC_REDUCE_RATE_EDIT,220,168,31,12,ES_AUTOHSCROLL
+    LTEXT           "删减比率:",IDC_STATIC,182,171,36,8
+    LTEXT           "%",IDC_STATIC,253,169,8,8
+    EDITTEXT        IDC_DISTANCE_THRESHOLD,220,194,31,12,ES_AUTOHSCROLL
+    LTEXT           "距离阈值:",IDC_STATIC,181,194,37,8,0,WS_EX_TRANSPARENT
+    LTEXT           "°",IDC_STATIC,251,184,8,8
+    LTEXT           "mm",IDC_STATIC,251,197,8,8
+    EDITTEXT        IDC_SMOOTH_NUM,221,144,37,14,ES_AUTOHSCROLL
+    LTEXT           "迭代次数:",IDC_STATIC,181,147,37,8,0,WS_EX_TRANSPARENT
+    GROUPBOX        "平滑设置",IDC_STATIC,179,116,85,44
+    EDITTEXT        IDC_SMOOTH_RATE_EDIT,221,128,37,14,ES_AUTOHSCROLL
+    LTEXT           "平滑速率:",IDC_STATIC,182,131,36,8
+    CONTROL         "Spin1",IDC_SPINWOND,"msctls_updown32",UDS_ARROWKEYS | UDS_HORZ,266,118,22,34
+    CTEXT           "三维重建系统（3DRCS）控制台",IDC_STATIC,371,1,113,11,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,289,7,261,253
+    GROUPBOX        "",IDC_STATIC,267,3,8,9
+    GROUPBOX        "",IDC_STATIC,267,255,8,9
+    GROUPBOX        "",IDC_STATIC,282,3,8,9
+    GROUPBOX        "",IDC_STATIC,282,255,8,9
+    PUSHBUTTON      "简化规范化",IDC_REDUCE_MESH2,296,16,49,14
+    PUSHBUTTON      "统计正则性",IDC_CalStandard,295,112,50,14
+    PUSHBUTTON      "算法说明",IDC_PSOintroductioni,354,16,50,14
+    PUSHBUTTON      "自适应简化",IDC_REDUCE_MESH3,297,56,50,14
+    GROUPBOX        "简化设置",IDC_STATIC,181,160,85,67
+    LTEXT           "面积阈值:",IDC_STATIC,182,206,37,8
+    EDITTEXT        IDC_AERA_THRESHOLD,220,206,31,12,ES_AUTOHSCROLL
+    LTEXT           "mm2",IDC_STATIC,251,207,13,8
+    LTEXT           "体积阈值:",IDC_STATIC,182,217,37,8
+    EDITTEXT        IDC_VOLUME_THRESHOLD,220,216,31,12,ES_AUTOHSCROLL
+    LTEXT           "mm3",IDC_STATIC,251,217,13,8
+END
+
+IDD_SAVEDLG DIALOGEX 0, 0, 227, 123
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "保存设置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,161,75,45,16
+    PUSHBUTTON      "取消",IDCANCEL,161,95,45,16
+    EDITTEXT        IDC_SAVEPATH,11,18,155,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览…",IDC_SAVE_PATH,172,18,44,14
+    GROUPBOX        "目标文件夹",IDC_STATIC,7,7,214,30
+    CONTROL         "三角面片反向",IDC_SAVEREVERSEFACET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,154,50,62,19
+    EDITTEXT        IDC_XZOOMSAVE,21,53,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YZOOMSAVE,65,55,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZZOOMSAVE,108,55,32,14,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,11,57,9,8
+    LTEXT           "Y:",IDC_STATIC,55,57,9,8
+    LTEXT           "Z:",IDC_STATIC,99,57,9,8,0,WS_EX_TRANSPARENT
+    GROUPBOX        "比例缩放",IDC_STATIC,7,43,138,28
+    GROUPBOX        "",IDC_STATIC,149,43,72,28
+    EDITTEXT        IDC_XTRANSLATE,21,89,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YTRANSLATE,65,89,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZTRANSLATE,107,89,32,14,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,11,91,9,8
+    LTEXT           "Y:",IDC_STATIC,55,91,9,8
+    LTEXT           "Z:",IDC_STATIC,99,91,9,8,0,WS_EX_TRANSPARENT
+    GROUPBOX        "平移参数",IDC_STATIC,7,79,138,28
+END
+
+IDD_SHOWPARADLG DIALOGEX 0, 0, 246, 313
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "显示参数设置"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,80,11,128,24
+    EDITTEXT        IDC_EDIT14,57,38,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,172,38,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,102,83,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,160,83,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,207,83,25,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,129,102,54,12,ES_AUTOHSCROLL
+    CONTROL         "法向量着色",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,152,54,14
+    CONTROL         "自定义着色",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,13,174,51,14
+    EDITTEXT        IDC_EDIT5,101,175,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,155,175,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,209,175,22,12,ES_AUTOHSCROLL
+    CONTROL         "自定义着色",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,207,54,14
+    EDITTEXT        IDC_EDIT8,101,208,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,155,208,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,209,208,22,12,ES_AUTOHSCROLL
+    CONTROL         "法向量着色",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,241,54,14
+    CONTROL         "自定义着色",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,13,261,51,14
+    EDITTEXT        IDC_EDIT11,101,263,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,155,263,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,209,263,22,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,63,292,50,14
+    PUSHBUTTON      "取消",IDCANCEL,132,292,50,14
+    GROUPBOX        "光照模式显示效果",IDC_STATIC,7,66,232,55,BS_CENTER
+    GROUPBOX        "普通模式显示效果",IDC_STATIC,7,129,232,155,BS_CENTER
+    GROUPBOX        "点云显示",IDC_STATIC,7,141,232,51
+    GROUPBOX        "",IDC_STATIC,10,147,227,21
+    GROUPBOX        "",IDC_STATIC,10,168,227,21
+    GROUPBOX        "",IDC_STATIC,73,168,164,21
+    GROUPBOX        "面片显示",IDC_STATIC,7,230,232,50
+    GROUPBOX        "",IDC_STATIC,10,236,227,21
+    GROUPBOX        "",IDC_STATIC,10,256,227,21
+    GROUPBOX        "",IDC_STATIC,73,256,164,21
+    GROUPBOX        "线框显示",IDC_STATIC,7,195,232,30
+    GROUPBOX        "",IDC_STATIC,73,201,164,21
+    GROUPBOX        "",IDC_STATIC,10,201,227,21
+    LTEXT           "模型表面颜色：",IDC_STATIC,13,85,58,9
+    LTEXT           "模型光滑程度：",IDC_STATIC,13,104,58,9
+    GROUPBOX        "",IDC_STATIC,10,95,227,21
+    GROUPBOX        "",IDC_STATIC,10,76,227,21
+    GROUPBOX        "",IDC_STATIC,73,76,164,21
+    GROUPBOX        "全局显示效果",IDC_STATIC,7,2,232,55,BS_CENTER
+    LTEXT           "模型透明度：",IDC_STATIC,13,21,58,9
+    GROUPBOX        "",IDC_STATIC,10,12,227,21
+    GROUPBOX        "",IDC_STATIC,73,12,164,21
+    LTEXT           "红：",IDC_STATIC,81,85,20,10
+    GROUPBOX        "",IDC_STATIC,73,95,164,21
+    LTEXT           "绿：",IDC_STATIC,135,85,20,10
+    LTEXT           "蓝：",IDC_STATIC,189,85,20,10
+    LTEXT           "红：",IDC_STATIC,81,177,20,10
+    LTEXT           "绿：",IDC_STATIC,135,177,20,10
+    LTEXT           "蓝：",IDC_STATIC,189,177,20,10
+    LTEXT           "红：",IDC_STATIC,81,210,20,10
+    LTEXT           "绿：",IDC_STATIC,135,210,20,10
+    LTEXT           "蓝：",IDC_STATIC,189,210,20,10
+    LTEXT           "红：",IDC_STATIC,81,265,20,10
+    LTEXT           "绿：",IDC_STATIC,135,265,20,10
+    LTEXT           "蓝：",IDC_STATIC,189,265,20,10
+    LTEXT           "点的大小：",IDC_STATIC,13,40,41,9
+    GROUPBOX        "",IDC_STATIC,10,31,227,21
+    GROUPBOX        "",IDC_STATIC,122,31,115,21
+    LTEXT           "线宽大小：",IDC_STATIC,128,40,41,9
+END
+
+IDD_MODEINFODLG DIALOGEX 0, 0, 249, 172
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "模型信息"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,98,150,50,14
+    EDITTEXT        IDC_XMID,54,20,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_YMID,54,41,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ZMID,54,63,43,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "X轴方向:",IDC_STATIC,13,22,38,12
+    GROUPBOX        "旋转中心",IDC_STATIC,54,7,45,73,BS_CENTER
+    EDITTEXT        IDC_XMAX,101,20,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_YMAX,101,41,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ZMAX,101,63,43,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Y轴方向:",IDC_STATIC,13,44,38,12
+    GROUPBOX        "最大值",IDC_STATIC,100,7,45,73,BS_CENTER
+    EDITTEXT        IDC_XMIN,147,20,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_YMIN,147,41,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ZMIN,147,63,43,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Z轴方向:",IDC_STATIC,13,65,38,12,0,WS_EX_TRANSPARENT
+    GROUPBOX        "最小值",IDC_STATIC,146,7,45,73,BS_CENTER
+    GROUPBOX        "",IDC_STATIC,7,13,230,23
+    GROUPBOX        "",IDC_STATIC,7,35,230,23
+    GROUPBOX        "",IDC_STATIC,7,57,230,23
+    GROUPBOX        "",IDC_STATIC,7,2,230,82
+    GROUPBOX        "轴向",IDC_STATIC,7,7,45,73,BS_CENTER
+    EDITTEXT        IDC_XSPAN,193,19,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_YSPAN,193,41,43,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ZSPAN,193,63,43,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "跨度",IDC_STATIC,192,7,45,73,BS_CENTER
+    EDITTEXT        IDC_MODEVOLUME,52,90,43,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "模型体积:",IDC_STATIC,12,92,38,12
+    EDITTEXT        IDC_MODESURFACEAREA,174,90,43,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "模型表面积:",IDC_STATIC,124,92,46,12
+    GROUPBOX        "",IDC_STATIC,7,83,230,23
+    GROUPBOX        "",IDC_STATIC,7,83,108,23
+    LTEXT           "面数：",IDC_STATIC,14,124,28,11
+    LTEXT           "边数：",IDC_STATIC,90,124,28,11
+    LTEXT           "点数：",IDC_STATIC,165,124,28,11
+    EDITTEXT        IDC_FACET,39,122,34,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDGE,115,122,34,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VERTEX,191,122,34,12,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自适应简化"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,259,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,30,50,14
+    GROUPBOX        "自适应简化设置",IDC_STATIC,30,7,224,158
+    LTEXT           "输入简化比率：",IDC_STATIC,56,69,76,23,SS_CENTERIMAGE
+    EDITTEXT        IDC_REDUCERATE3,110,74,59,15,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,171,76,8,8
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "重建"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,259,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,34,50,14
+    GROUPBOX        "重建参数设置",IDC_STATIC,31,18,219,132
+    LTEXT           "X:",IDC_STATIC,48,45,8,8
+    LTEXT           "Y:",IDC_STATIC,114,45,8,8
+    LTEXT           "Z:",IDC_STATIC,179,45,8,8
+    CONTROL         "",IDC_MMCMTTHRESHOLD,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,84,74,100,23
+    LTEXT           "阈值设置：",IDC_STATIC,46,82,41,8
+    EDITTEXT        IDC_MTHRESHOLDEDIT,189,78,40,14,ES_AUTOHSCROLL
+    CONTROL         "外环",IDC_MCHECKRING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,84,122,32,10
+    CONTROL         "封闭",IDC_MPATCHMESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,169,121,32,10
+    EDITTEXT        IDC_MXCONZOOM,58,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MYCONZOOM,122,41,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MZCONZOOM,189,41,40,14,ES_AUTOHSCROLL
+    LTEXT           "扫描层间距（Z值）",IDC_STATIC,256,71,41,19
+    LTEXT           "Static",IDC_VIEWDIAMETER,256,111,41,19
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网格简化"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,259,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,34,50,14
+    GROUPBOX        "简化设置",IDC_STATIC,17,15,235,139
+    LTEXT           "删减比率：",IDC_STATIC,73,46,40,14
+    LTEXT           "角度阈值：",IDC_STATIC,73,71,41,8
+    LTEXT           "距离阈值：",IDC_STATIC,73,97,41,8
+    EDITTEXT        IDC_REDUCERATE2,123,44,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MANGLE_THRESHOLD,123,67,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MDISTANCE_THRESHOLD,123,93,40,14,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,165,46,8,8
+    LTEXT           "°",IDC_STATIC,165,71,8,8
+    LTEXT           "mm",IDC_STATIC,165,95,12,8
+END
+
+IDD_DIALOG4 DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网格平滑"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,259,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,33,50,14
+    GROUPBOX        "平滑设置",IDC_STATIC,25,17,208,139
+    LTEXT           "平滑速率：",IDC_STATIC,83,62,41,8
+    LTEXT           "迭代次数：",IDC_STATIC,83,97,41,8
+    EDITTEXT        IDC_MSMOOTH_RATE,125,59,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MSMOOTH_NUM,125,94,40,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "3DRCS Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "3DRCS"
+            VALUE "LegalCopyright", "版权所有 (C) 重庆大学ICT研究中心 2010"
+            VALUE "OriginalFilename", "3DRCS.EXE"
+            VALUE "ProductName", "3DRCS 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CONTROLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 549
+        VERTGUIDE, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_SAVEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_SHOWPARADLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 306
+    END
+
+    IDD_MODEINFODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 26, 26
+BEGIN
+    BUTTON      IDM_PICS_OPEN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      IDM_CLEAR_DATA
+    BUTTON      IDM_RELOAD_DATA
+    SEPARATOR
+    BUTTON      IDM_ZOOMDEL
+    BUTTON      IDM_ZOOMADD
+    BUTTON      IDM_SHOWMEDIUM
+    BUTTON      IDM_ZOOMBACK
+    SEPARATOR
+    BUTTON      IDC_TURNX
+    BUTTON      IDC_TURNY
+    BUTTON      IDC_TURNZ
+    SEPARATOR
+    BUTTON      IDC_TURN
+    BUTTON      IDC_TRANSLATE
+    BUTTON      IDC_ZOOMOUT
+    SEPARATOR
+    BUTTON      IDM_CHECKLIGHTING
+    BUTTON      IDM_FACETREVERSE
+    BUTTON      IDM_CHECKCOOLDINATE
+    SEPARATOR
+    BUTTON      IDC_FACET
+    BUTTON      IDC_EDGE
+    BUTTON      IDC_VERTEX
+    BUTTON      IDC_FacetEdge
+END
+
+IDR_TOOLBAR1 TOOLBAR 26, 26
+BEGIN
+    BUTTON      IDC_MC_CONSTRUCT
+    BUTTON      IDC_MT_CONSTRUCT
+    SEPARATOR
+    BUTTON      IDM_REDUCE_MESH
+    BUTTON      IDM_REDUCE_MESH3
+    BUTTON      IDM_SMOOTH_Mesh
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "3DRCS\n\n3DRCS\n\n\n3DRCS.Document\n3DRCS Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "3DRCS"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个STL或AST文件\n加载模型"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存模型\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+    ID_PROGRESSTEXT         "请单击""读取数据""加载原始数据    "
+    ID_PROGRESSAREA         "                              "
+    ID_INDICATOR_X          "X轴旋转角"
+    ID_INDICATOR_Y          "Y轴旋转角"
+    ID_INDICATOR_Z          "Z轴旋转角"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_TURNX               "鼠标滚轮绕X轴旋转\n鼠标滚轮绕X轴旋转"
+    IDC_TURNY               "鼠标滚轮绕Y轴旋转\n鼠标滚轮绕Y轴旋转"
+    IDC_TURNZ               "鼠标滚轮绕Z轴旋转\n鼠标滚轮绕Z轴旋转"
+    ID_PARA_SET             "为重建过程设置参数\n设置参数"
+    ID_FILE_STL             "打开一个STL或AST模型\n加载模型"
+END
+
+STRINGTABLE
+BEGIN
+    ID_DATA_CLEAR           "清除已加载的数据\n清除数据"
+    ID_APP_HELP             "打开帮助文档\n帮助"
+    IDC_TURN                "鼠标动作：旋转\n鼠标动作：旋转"
+    IDC_TRANSLATE           "鼠标动作：平移\n鼠标动作：平移"
+    IDC_ZOOMOUT             "鼠标动作：局部放大\n鼠标动作：局部放大"
+    IDC_FACET               "面片\n面片"
+    IDC_EDGE                "网格\n网格"
+    IDC_VERTEX              "点云\n点云"
+    ID_PICS_OPEN            "打开一系列BMP或PCG图像文件\n加载图像"
+    IDC_MC_CONSTRUCT        "MC重建\nMC重建"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_MESHPATCH           "对模型的上下端面进行缝合"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_REDUCE_MESH2        "一种新的模型简化方法"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDC_STADRAD_MESH    "风格规范化处理"
+    IDM_PICS_OPEN           "加载图形文件"
+    IDC_MT_CONSTRUCT        "MT重建\nMT重建"
+    IDM_REDUCE_MESH         "模型简化\n模型简化"
+    IDM_REDUCE_MESH3        "自适应模型简化\n自适应模型简化"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CHECKLIGHTING       "光照\n光照"
+    IDM_FACETREVERSE        "面片反向\n面片反向"
+    IDM_CHECKCOOLDINATE     "坐标\n坐标"
+    IDM_ZOOMADD             "放大\n放大"
+    IDM_ZOOMDEL             "缩小\n缩小"
+    IDM_SHOWMEDIUM          "适中\n适中"
+    IDM_ZOOMBACK            "复原\n复原"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CLEAR_DATA          "清空数据\n清空数据"
+    IDM_RELOAD_DATA         "重载\n重载"
+    IDM_SMOOTH_Mesh         "网格平滑\n网格平滑"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_FacetEdge           "面片+网格\n面片+网格"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\3DRCS.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
